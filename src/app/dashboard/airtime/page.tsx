@@ -2,6 +2,7 @@ import Input from "@/components/Input";
 import SavedContacts from "./SavedContacts";
 import Button from "@/components/Button";
 import AirtimeHistory from "../AirtimeHistory";
+import Select from "@/components/Select";
 
 export default function AirtimePage() {
     return (
@@ -13,7 +14,7 @@ export default function AirtimePage() {
 
                 <form className="flex flex-col gap-6 mt-6">
                     <Input id="amount" placeholder="0.00" label="Amount" />
-                    <Input id="network" placeholder="Glo" label="Network" />
+                    <Select id="network" label="Network" placeholder="" value="Glo" options={["Glo", "9mobile", "MTN", "Airtel"]} />
                     <Input id="phone-number" placeholder="+2349054057103" label="Phone Number" />
                     <Input id="charged" placeholder="0.00" label="You will be charged" percent="5" disabled />
                     <Button type="submit" label="Purchase Airtime" block />

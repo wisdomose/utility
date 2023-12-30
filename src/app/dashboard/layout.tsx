@@ -53,7 +53,7 @@ export default function DashboardLayout({
             </div>
 
             {/* overlay */}
-            <div onClick={toggleOpen} className={`bg-[#F4F6FF]/70 backdrop-blur-sm absolute inset-0 md:hidden ${open ? "max-md:block" : "max-md:hidden"}`}></div>
+            <div onClick={toggleOpen} className={`bg-[#F4F6FF]/70 backdrop-blur-sm absolute inset-0 md:hidden z-10 ${open ? "max-md:block" : "max-md:hidden"}`}></div>
 
             {/* tablet and laptop */}
             <nav className="hidden py-5 md:flex max-md:justify-between md:flex-col items-start lg:items-center relative">
@@ -83,7 +83,7 @@ export default function DashboardLayout({
                 </div>
                 {/* max-md:-translate-x-full */}
                 {/* sidenav on large screen */}
-                <div className={`pt-5 lg:px-5 md:flex flex-col bg-white max-md:absolute max-md:left-0 max-md:transition-transform max-md:duration-200 max-md:top-full max-md:w-[80vw] ${open ? "max-md:-translate-x-0" : "max-md:-translate-x-full"}`}>
+                <div className={`max-lg:pt-5 lg:px-5 md:flex flex-col bg-white max-md:absolute max-md:left-0 max-md:transition-transform max-md:duration-200 max-md:top-full max-md:w-[80vw] ${open ? "max-md:-translate-x-0" : "max-md:-translate-x-full"}`}>
                     <Nav activePage={activePage} open={open} />
                 </div>
             </nav>
