@@ -18,7 +18,7 @@ export default function SavedContacts() {
                     onSwiper={(swiper) => console.log(swiper)}
                 >
                     {[1, 2, 3, 4, 5].map(a => (
-                        <SwiperSlide className="!flex-shrink">
+                        <SwiperSlide className="!flex-shrink" key={a}>
                             <button className="flex flex-col gap-1 items-center bg-white px-5 py-5">
                                 <div className="relative overflow-hidden w-10 h-10 rounded-full">
                                     <Image src="/img/mtn.png" alt="" fill />
